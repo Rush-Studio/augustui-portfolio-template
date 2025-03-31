@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Template with Content Collection (SEO Rich)
 
-## Getting Started
+This is a simple static-generated site built using **Next.js** with content management through Markdown (.mdx) files. The site supports easy configuration through a dedicated config file and includes optional Google Analytics integration. It is designed to be **SEO rich** with optimized metadata, dynamic page titles, and improved visibility on search engines.
 
-First, run the development server:
+## 🚀 Features
+
+- Static site generation using Next.js
+- Content management with MDX files
+- Configurable appearance and content
+- Google Analytics support
+- **SEO optimized** with customizable metadata
+
+---
+
+## 📦 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+.
+├── content/           # MDX files for pages and posts
+├── config/            # Site configuration file
+├── app/             # Next.js pages
+├── public/            # Static assets
+├── .env.example       # Example environment variables
+└── README.md          # This file
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Install dependencies:**
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Configure the site:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Edit the contents of the `.mdx` files inside the `content/` folder.
+   - Adjust the configuration using the `config/config.js` file for appearance and homepage content.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Optional: Add Google Analytics**
+
+   - Create a `.env` file by copying from `.env.example`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Add your Google Analytics ID and App URL to `.env`:
+     ```env
+     NEXT_PUBLIC_GA_ID=YOUR_GA_TRACKING_ID
+     NEXT_PUBLIC_APP_URL=YOUR_APP_URL # Defaults to http://localhost:3000
+     ```
+
+4. **Build the site:**
+
+   ```bash
+   npm run build
+   ```
+
+5. **Start the site:**
+   ```bash
+   npm run start
+   ```
+
+---
+
+## 🧑‍💻 Customization
+
+### 1. **Updating Content**
+
+- All content is stored in the `/content` folder as `.mdx` files.
+- Edit existing files or add new ones for additional pages.
+
+### 2. **Site Configuration**
+
+- Customize the homepage and site settings via `config/config.js`.
+- Options include:
+  - Site Title
+  - Navigation Links
+  - Theme Preferences
+  - **SEO Metadata** like title, description, and keywords
+
+---
+
+## ⚙️ Environment Variables
+
+- **NEXT_PUBLIC_GA_ID**: _(Optional)_ Add your Google Analytics Tracking ID.
+- **NEXT_PUBLIC_APP_URL**: _(Optional)_ Define your site URL. Defaults to `http://localhost:3000` if not specified.
+
+Example `.env` file:
+
+```env
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_APP_URL=https://yourdomain.com
+```
+
+---
+
+## 🤝 Contributing
+
+Feel free to submit issues or pull requests to improve this template.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+---
+
+Enjoy building your SEO-rich personal portfolio! 🚀
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
